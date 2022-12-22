@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export PYBUILD_NAME=releases
+
+# tests will not run properly because spec is not packaged yet
+export PYBUILD_DISABLE=test
+
+%:
+	dh $@ --with=python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build:
+	PYTHONPATH=. python3 -m sphinx -b html -d docs/_build/.doctrees -N docs docs/_build/html
+	dh_auto_build
+
+override_dh_installchangelogs:
+	dh_installchangelogs -- docs/changelog.rst
+
+override_dh_compress:
+	dh_compress -X changelog.html

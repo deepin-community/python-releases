@@ -1,0 +1,9 @@
+Document: python-releases-doc
+Title: Debian python-releases Manual
+Abstract: This manual describes what python-releases is and how it can be
+ helpful to provide proper changelogs for Sphinx documentation.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-releases-doc/html/index.html
+Files: /usr/share/doc/python-releases-doc/html/*.html

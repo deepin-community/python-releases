@@ -1,0 +1,96 @@
+python-releases (1.6.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version.
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 11 Mar 2020 15:02:04 +0100
+
+python-releases (1.4.0-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Stefano Rivera ]
+  * Patch: Compatibility with python3-semantic-version >= 2.7.0
+    (Closes: #944263).
+
+ -- Graham Inggs <ginggs@debian.org>  Tue, 26 Nov 2019 08:49:31 +0000
+
+python-releases (1.4.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+  * Drop Python 2 support (Closes: #938128).
+  * Enable autopkgtest-pkg-python testsuite.
+  * Bump debhelper compat level to 12.
+  * Bump standards version to 4.4.0.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 12 Sep 2019 16:56:59 +0200
+
+python-releases (1.4.0-1) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Team upload.
+  * New upstream release.
+  * Update copyright.
+  * Verify upstream signature in uscan.
+  * Update X-Python3-Version, upstream declares >= 3.4 support.
+  * Declare Rules-Requires-Root: no.
+  * Bump debhelper compat to 10.
+  * Bump Standards-Version to 4.1.3, no changes needed.
+  * New upstream requirement: python3-semantic-version.
+  * Build docs under Python 3.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/watch: Use https protocol
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 16 Mar 2018 15:54:24 -0700
+
+python-releases (1.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * add missing trailing slash in debian/clean (Closes: #808616)
+  * Use https URL for Vcs-Git in debian/control
+  * Disable tests in debian/rules because they require spec which is not
+    packaged for debian yet, remove python{3,}-docutils from Build-Depends
+  * New upstream version
+  * add new python-releases-doc binary package containing the Sphinx
+    documentation
+    - add stanza to debian/control
+    - add sphinx-build invocation in debian/rules
+    - add docs/_build/ to debian/clean
+    - add debian/python-releases-doc.doc-base and
+      debian/python-releases-doc.docs files
+  * Add myself to copyright file, bump copyright years
+  * patch README.rst to avoid privacy breach caused by included travis-ci
+    image
+  * patch docs/conf.py to use a fixed your to support reproducible builds
+
+ -- Jan Dittberner <jandd@debian.org>  Sat, 30 Jan 2016 20:10:52 +0100
+
+python-releases (0.7.0-2) unstable; urgency=medium
+
+  [ Zygmunt Krynicki ]
+  * debian/watch: use the new pypi redirector
+
+  [ Jan Dittberner ]
+  * Team upload.
+  * add python{,3}-docutils to Build-Depends to fix failing test import
+    (Closes: #802137)
+  * bump Standards-Version to 3.9.6 (no changes needed)
+
+ -- Jan Dittberner <jandd@debian.org>  Mon, 26 Oct 2015 21:03:29 +0100
+
+python-releases (0.7.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #745347)
+
+ -- Zygmunt Krynicki <zygmunt.krynicki@canonical.com>  Tue, 09 Sep 2014 11:13:29 +0200
